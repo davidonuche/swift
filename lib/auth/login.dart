@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swift/auth/sign_up.dart';
+import 'package:swift/nav/bottom_nav.dart';
+import 'package:swift/screens/home_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -103,7 +105,15 @@ class _LoginState extends State<Login> {
                   Container(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const Bottom_Nav(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Sign In",
                         style: TextStyle(fontSize: 20, color: Colors.white),
